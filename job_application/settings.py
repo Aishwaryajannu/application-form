@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-f1g50yh&1_c=9qc)+3bacoj@iq%q0m$7!(5o@1-&d*6jru(9d9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['application-form-tyor.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition

@@ -9,7 +9,6 @@ class JobApplication(models.Model):
     city = models.CharField(max_length=100)
     pincode = models.CharField(max_length=10)
     date = models.DateField()
-    upload = models.FileField(upload_to='uploads/')
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.job_role}"

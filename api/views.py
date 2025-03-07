@@ -3,6 +3,7 @@ from rest_framework import generics
 from .models import JobApplication
 from .serializers import JobApplicationSerializer
 from rest_framework.response import Response
+from rest_framework import status
 from rest_framework.parsers import MultiPartParser, FormParser
 import logging
 logger = logging.getLogger(__name__)

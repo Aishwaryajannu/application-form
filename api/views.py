@@ -2,12 +2,14 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import JobApplication
 from .serializers import JobApplicationSerializer
+from rest_framework.parsers import MultiPartParser, FormParser
 import logging
 logger = logging.getLogger(__name__)
 
 class JobApplicationListCreate(generics.ListCreateAPIView):
     queryset = JobApplication.objects.all()
     serializer_class = JobApplicationSerializer
+    parser_classes = (MultiPartParser, FormParser)
 
     def create(self, request, *args, **kwargs):
         logger.info("Received Data: %s", request.data)  # Log request data
